@@ -10,24 +10,22 @@ const NavBar = () =>{
         }
     }
     return (
-        <nav>
-            <ul>
-                <li>
+        <nav className="nav">
+            <span className="site-name">
                 Lost in Translation
-                </li>
-            </ul>
+            </span>
             {user != null &&
-            <ul>
-                <li>
-                    <NavLink to="/Translation">Translation</NavLink>
-                </li>
-                <li>
-                    <NavLink to="/Profile">Profile</NavLink>
-                </li>
-                <li>
+            <div className="link-div">
+                <ul>
+                    <NavLink to="/Translation" className={"link"}>Translation</NavLink>
+                </ul>
+                <ul>
+                    <NavLink to="/Profile"className={"link"}>Profile</NavLink>
+                </ul>
+                <ul className="logout-button">
                     <button onClick={handleLogoutClick}>Logout</button>
-                </li>
-            </ul>
+                </ul>
+            </div>
             }
         </nav>
     )

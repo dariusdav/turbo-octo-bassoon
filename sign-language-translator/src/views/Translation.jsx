@@ -26,12 +26,11 @@ const Translation = () => {
 
     return (
         <>
-            <h1>Translation</h1>
             <section id="Translation-input">
                 <TranslationForm onClicked={handleTranslateClicked}></TranslationForm>
-                {translation && <TranslationBox word={translation}></TranslationBox>}
             </section>
-            <div>
+            <div className="translation-box">
+                {translation && <TranslationBox word={translation}></TranslationBox>}
             </div>
 
         </>

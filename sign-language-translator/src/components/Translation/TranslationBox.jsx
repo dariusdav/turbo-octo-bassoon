@@ -1,12 +1,12 @@
 
 const TranslationBox = ({word}) => {
     const handLetters = word.split("").map((w,id) =>{
-        return <li key={id}>
-            <img src={`img/${w}.png`} alt={w}/></li>
+        return <ul key={id} >
+            <img src={`img/${w}.png`} alt={w} className={"hands"}/></ul>
     })    
 
     return ( 
-    <div className="TranslationBox">
+    <div className="translated">
     {handLetters}
     </div>)
 }

@@ -10,8 +10,7 @@ function App() {
   return (
     <BrowserRouter>
     <div className="App"> 
-      <span> Lost in Translation</span>
-      <NavBar></NavBar>
+      <NavBar className="nav"></NavBar>
       <Routes>
         <Route path="/"element={<Startup/>}></Route>
         <Route path="/Profile"element={<Profile/>}></Route>

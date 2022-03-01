@@ -5,6 +5,7 @@ import { storageSave } from '../../utils.js/storage';
 import { useNavigate } from 'react-router-dom';
 import { useUser } from '../../context/UserContext';
 
+
 const usernameConfig = {
     required: true,
     minLength: 5
@@ -47,19 +48,28 @@ const Login = () => {
             setUser(data)
         }
     }
-    
+
     return (
         <>
-            <h2>Lost In Translation</h2>
+            <div className='get-started'>
+                <div classname="logo-and-splash">
+                    <img src={"img/Splash.svg"} alt={"splash"} className='splash' ></img>
+                    <img src={"img/logo.png"} alt={"logo"} className='logo'></img>
+                </div>
+                <div>
+                    <h1 className='site-name'>Lost In Translation</h1>
+                    <h3>Get started</h3>
+                </div>
+            </div>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <fieldset>
-                    <label htmlFor="username">Username:</label>
+                    <label htmlFor="username"></label>
                     <input type="text"
                         placeholder="What's your name?" {...register("username", usernameConfig)}
                     />
                     {errorMessage}
+                    <button type="submit">Login</button>
                 </fieldset>
-                <button type="submit">Login</button>
                 {apiError && <p>{apiError}</p>}
             </form>
         </>

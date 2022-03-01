@@ -7,10 +7,11 @@ const Profile = () => {
     const {user} = useUser()
     return (
         <>
-        <h1>Profile</h1>
+        <div className="profile">
         <ProfileHeader username={user.username}></ProfileHeader>
         <ProfileActions></ProfileActions>
-        <ProfileHistory translations={user.translations} ></ProfileHistory >
+        <ProfileHistory translations={user.translations }className={"history"} ></ProfileHistory >
+        </div>
         </>
     )
 }

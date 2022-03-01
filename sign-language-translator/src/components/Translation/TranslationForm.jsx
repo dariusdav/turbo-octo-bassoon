@@ -13,7 +13,7 @@ const TranslationForm = ({ onClicked }) => {
         <>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <fieldset>
-                    <label htmlFor="Translation">Translation?</label>
+                    <label htmlFor="Translation"></label>
                     <input type="text" {...register("Translation")}></input>
                     <button type="submit">Translate</button>
                 </fieldset>
