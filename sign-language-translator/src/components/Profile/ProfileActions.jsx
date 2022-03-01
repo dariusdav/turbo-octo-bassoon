@@ -1,9 +1,18 @@
-import { useNavigate } from "react-router-dom"
+import { clearUser } from "../../api/user"
+import { useUser } from "../../context/UserContext"
 
 const ProfileActions = () => {
+    const {user,setUser} = useUser()
+
+    const onClick = async() => {
+        const [error,result] = await clearUser(user,"")
+        if (error === null ){
+            setUser(result)
+        }
+    }
     return(
         <div>
-            <button>Clear History</button>
+            <button onClick={onClick}>Clear History</button>
         </div>
     )
 }
