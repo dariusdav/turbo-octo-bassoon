@@ -5,7 +5,6 @@ import { useUser } from "../context/UserContext"
 import withAuth from "../hoc/withAuth"
 const Profile = () => {
     const {user} = useUser()
-    console.log("Profile",user)
     return (
         <>
         <div className="profile">

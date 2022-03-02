@@ -4,7 +4,6 @@ const TranslationForm = ({ onClicked }) => {
     // const {setTranslation} = useTranslation(null)
     const { register, handleSubmit, formState: { errors } } = useForm()
     if (errors !== null) {
-        console.log(errors);
     }
     const onSubmit = data => {
         onClicked(data)

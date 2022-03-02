@@ -1,5 +1,4 @@
 const ProfileHistory = ({translations}) => {
-    console.log("ttr",translations)
     return(
         <section>
             <h4> Your Translation history</h4>

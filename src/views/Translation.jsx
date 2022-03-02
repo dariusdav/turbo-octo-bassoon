@@ -12,10 +12,7 @@ const Translation = () => {
     const {user,setUser} = useUser()
     const handleTranslateClicked = async (word) =>{
         setTranslation(word.Translation)
-        console.log("prev Array", user);
-        console.log("word  ",word.Translation);
         const [error, result] = await updateUser(user,word.Translation)
-        console.log(result);
         //Updating the local user info to sync states
         if(error === null){
             setUser(result)
