@@ -16,7 +16,8 @@
 -  [License](#license)
 ## Overview
 A simple sign language translator website with React and raw CSS. The website is also hosted on heroku:
-link tbd
+<img src="React App.pdf">
+link : https://dd-sign-translator.herokuapp.com/
 
 ## Usage
 
@@ -32,7 +33,7 @@ Start the server locally :
 
 > npm start
 
-You can now access the website locally through the [localhost:5000](localhost:5000)
+You can now access the website locally through the [localhost:3000](localhost:3000)
 ## Maintainers
 
 [@dariusdav](https://github.com/dariusdav)
