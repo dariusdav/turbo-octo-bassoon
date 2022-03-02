@@ -16,7 +16,7 @@
 -  [License](#license)
 ## Overview
 A simple sign language translator website with React and raw CSS. The website is also hosted on heroku:
-<img src="React App.pdf">
+<img src="figma.png">
 link : https://dd-sign-translator.herokuapp.com/
 
 ## Usage
