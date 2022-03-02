@@ -14,6 +14,7 @@ const checkForUser = async (username) => {
 }
 
 const createUser = async (username) => {
+    console.log("x-api-key", process.env.REACT_APP_API_KEY,);
     try {
         const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}`, {
             method: "POST",

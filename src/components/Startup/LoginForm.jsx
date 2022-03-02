@@ -54,7 +54,7 @@ const Login = () => {
             <div className='get-started'>
                 <div className="logo-and-splash">
                     <img src={"img/Splash.svg"} alt={"splash"} className='splash' ></img>
-                    <img src={"img/logo.png"} alt={"logo"} className='logo'></img>
+                    <img src={"img/Logo.png"} alt={"logo"} className='logo'></img>
                 </div>
                 <div>
                     <h1 className='site-name'>Lost In Translation</h1>

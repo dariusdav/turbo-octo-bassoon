@@ -5,12 +5,17 @@ import { useUser } from "../context/UserContext"
 import withAuth from "../hoc/withAuth"
 const Profile = () => {
     const {user} = useUser()
+    console.log("Profile",user)
     return (
         <>
         <div className="profile">
         <ProfileHeader username={user.username}></ProfileHeader>
         <ProfileActions></ProfileActions>
-        <ProfileHistory translations={user.translations }className={"history"} ></ProfileHistory >
+        {user.translations !== null &&
+            <ProfileHistory translations={user.translations }className={"history"} />
+        } {user.translations === null &&
+            <p>No history</p>
+        }
         </div>
         </>
     )
