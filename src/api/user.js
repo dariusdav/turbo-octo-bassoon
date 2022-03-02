@@ -1,9 +1,7 @@
 const checkForUser = async (username) => {
     try {
         const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}?username=${username}`)
-        console.log(process.env.REACT_APP_API_BASE_URL);
         if (!response.ok) {
-            console.log(response.ok);
             throw new Error("Failed to fetch")
         }
         const data = await response.json()
@@ -14,7 +12,6 @@ const checkForUser = async (username) => {
 }
 
 const createUser = async (username) => {
-    console.log("x-api-key", process.env.REACT_APP_API_KEY,);
     try {
         const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}`, {
             method: "POST",
