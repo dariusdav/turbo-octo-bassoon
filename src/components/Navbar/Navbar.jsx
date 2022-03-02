@@ -5,8 +5,8 @@ const NavBar = () =>{
     const {user,setUser} = useUser()
     const handleLogoutClick = () =>{
         if (window.confirm("Are you sure?")){
-            localStorage.removeItem("user")
             setUser(null)
+            sessionStorage.removeItem("user")
         }
     }
     return (
