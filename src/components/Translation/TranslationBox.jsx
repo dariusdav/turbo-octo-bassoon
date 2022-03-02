@@ -1,6 +1,8 @@
 
 const TranslationBox = ({word}) => {
-    const handLetters = word.split("").map((w,id) =>{
+    const handLetters = word.split("")
+    .filter( w=> RegExp(/[a-z]|[A-Z]/).test(w))
+    .map((w,id) =>{
         return <ul key={id} >
             <img src={`img/${w}.png`} alt={w} className={"hands"}/></ul>
     })    

@@ -41,7 +41,7 @@ const Login = () => {
     const onSubmit = async ({ username }) => {
         const [error, data] = await loginUser(username)
         if (error !== null) {
-            setApiError(error)
+            setApiError(error.errorMessage)
         }
         if (data !== null) {
             storageSave("user", data)
@@ -52,7 +52,7 @@ const Login = () => {
     return (
         <>
             <div className='get-started'>
-                <div classname="logo-and-splash">
+                <div className="logo-and-splash">
                     <img src={"img/Splash.svg"} alt={"splash"} className='splash' ></img>
                     <img src={"img/logo.png"} alt={"logo"} className='logo'></img>
                 </div>
@@ -69,8 +69,8 @@ const Login = () => {
                     />
                     {errorMessage}
                     <button type="submit">Login</button>
+                {apiError !==null && <p>{apiError}</p>}
                 </fieldset>
-                {apiError && <p>{apiError}</p>}
             </form>
         </>
     )
